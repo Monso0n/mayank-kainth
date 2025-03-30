@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>👨🏾‍💻Mayank Kainth </title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Devicon (for technology icons) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+    
+    <!-- Font Awesome (for brand icons, e.g., GitHub, LinkedIn) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
+    />
+
+    <style>
+      /* Smooth scrolling for anchor links */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Matrix Background Canvas for Hero Section */
+      #matrix {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        filter: blur(4px);
+        z-index: 0;
+        background: #838383; /* background behind the matrix effect */
+      }
+
+      /* Slight transparency & blur for nav */
+      .frosted-nav {
+        background-color: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(4px);
+      }
+
+      /* Active link circle indicator */
+      .active-link::before {
+        content: "";
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        margin-right: 6px;
+        background-color: #1D4ED8; /* Circle color (Tailwind's blue-700) */
+        border-radius: 9999px; /* fully rounded */
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-900 font-sans relative">
+    <!-- Navigation Bar (rounded, centered, slightly transparent) -->
+    <nav
+      class="fixed top-4 left-1/2 transform -translate-x-1/2 frosted-nav text-gray-900 border border-gray-200 rounded-full shadow z-50"
+    >
+      <div class="px-6 py-2 flex items-center space-x-6">
+        <div class="text-xl font-bold">MK</div>
+        <a href="#hero" class="hover:text-blue-500">Home</a>
+        <a href="#about" class="hover:text-blue-500">About</a>
+        <a href="#experience" class="hover:text-blue-500">Experience</a>
+        <a href="#projects" class="hover:text-blue-500">Projects</a>
+        <a href="#skills" class="hover:text-blue-500">Skills</a>
+        <a href="#education" class="hover:text-blue-500">Education</a>
+        <a href="#contact" class="hover:text-blue-500">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="hero"
+      class="min-h-screen flex flex-col justify-center items-center text-center px-4 relative pt-20 bg-white"
+    >
+      <!-- Matrix Background (only for Hero) -->
+      <canvas id="matrix"></canvas>
+
+      <!-- Hero Content -->
+      <div class="relative z-10">
+        <!-- Profile Picture Placeholder -->
+        <div class="mb-8">
+          <img
+            src="assets/me.jpg"
+            alt="Profile Picture"
+            class="w-40 h-40 rounded-full border-4 border-gray-300 mx-auto"
+          />
+        </div>
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">
+          Mayank Kainth
+        </h1>
+        <p class="text-lg md:text-2xl text-white">
+          Software Engineer 
+        </p>
+
+        <!-- Social Buttons in Hero -->
+        <div class="flex gap-4 justify-center mt-8">
+          <a
+            href="https://github.com/Monso0n"
+            target="_blank"
+            class="inline-flex items-center px-4 py-2 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition"
+          >
+            <i class="fa-brands fa-github mr-2"></i> GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/mayank-kainth-8a0989195/"
+            target="_blank"
+            class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-500 transition"
+          >
+            <i class="fa-brands fa-linkedin mr-2"></i> LinkedIn
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section (Resume Objective) -->
+    <section id="about" class="py-16 px-4 bg-gray-50">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl font-semibold mb-4">About Me</h2>
+        <p class="text-gray-800 text-xl leading-relaxed">
+          Computer Science graduate from Toronto Metropolitan University with 2
+          years of professional experience, a strong academic record, and
+          expertise in software engineering, data analysis, and robotic
+          engineering. Passionate about developing scalable software, intelligent
+          automation, and cutting-edge robotic systems. Seeking a Software
+          Engineering position where I can apply and grow my technical skillset to
+          build innovative, high-impact solutions.
+        </p>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-16 px-4 bg-white">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-3xl font-semibold mb-8 text-center">Experience</h2>
+        <div class="relative border-l border-gray-300 ml-6">
+          <!-- Timeline item: Environment and Climate Change Canada -->
+          <div class="mb-10 ml-6">
+            <!-- Circle on the timeline -->
+            <span class="absolute flex items-center justify-center w-4 h-4 bg-blue-500 rounded-full -left-2 top-2"></span>
+            <p class="text-sm text-gray-500">May 2023 - August 2024</p>
+            <h3 class="text-lg font-semibold">Software Engineer (Co-op)</h3>
+            <p class="text-gray-600">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0kwSvpx5goCRaWl59v-5Rm82tl5jhJRS1xw&s"
+                alt="ECCC Logo"
+                class="w-10 inline-block mr-2 align-middle"
+              >
+              Environment and Climate Change Canada · North York, Toronto, ON
+            </p>
+            <ul class="list-disc ml-4 text-gray-700 mt-2 space-y-2">
+              <li>Engineered and deployed the Unified Radar Processor (URP) system to process critical data from Canada’s national weather radar network, supporting advanced meteorological forecasting, aviation safety, and public protection.</li>
+              <li>Optimized system performance by proactively implementing code fixes and enhancements, aligning with industry best practices and project benchmarks.</li>
+              <li>Collaborated with cross-functional teams to drive improvements in scalability and reliability, ensuring robust system performance.</li>
+              <li>Developed robust code quality by writing unit tests, conducting pre-release testing, and creating detailed documentation.</li>
+              <li>Streamlined project workflows through prompt ticket resolution and active participation in code reviews.</li>
+            </ul>
+          </div>
+          <!-- Timeline item: Ontario Power Generation -->
+          <div class="mb-10 ml-6">
+            <!-- Circle on the timeline -->
+            <span class="absolute flex items-center justify-center w-4 h-4 bg-blue-500 rounded-full -left-2 top-2"></span>
+            <p class="text-sm text-gray-500">September 2021 - April 2022</p>
+            <h3 class="text-lg font-semibold">Data Scientist (Co-op)</h3>
+            <p class="text-gray-600">
+              <img
+                src="https://www.pwu.ca/wp-content/uploads/2017/08/opg_logo.jpg"
+                alt="OPG Logo"
+                class="w-10 inline-block mr-2 align-middle"
+              >
+              Ontario Power Generation · Pickering, ON
+            </p>
+            <ul class="list-disc ml-4 text-gray-700 mt-2 space-y-2">
+              <li>Conceptualized and launched the ‘TWEEKs’ solution to automate report generation for part risk analysis, significantly boosting productivity and stakeholder communication.</li>
+              <li>Engineered automation processes to streamline supply chain housekeeping by extracting and analyzing historical outage data to identify low-stock items and flag surplus inventory.</li>
+              <li>Coordinated with vendors and project leaders to expedite part deliveries, optimizing shipping timelines for the Darlington Nuclear Refurbishment of Units 1 and 3.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 px-4 bg-gray-50">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-semibold text-center mb-8">Projects</h2>
+        <!-- Using Tailwind's auto-rows-fr to set each grid row cell to share available height equally -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 auto-rows-fr">
+          
+          <!-- Project: Remote Control Bomb Defusal Robot -->
+          <div class="flex flex-col border rounded-xl p-6 shadow transition transform hover:scale-105 duration-300">
+            <h3 class="text-xl font-bold mb-2">Remote Control Bomb Defusal Robot</h3>
+            <p class="text-gray-700 mb-2 italic">Undergraduate Thesis Project</p>
+            <ul class="list-disc ml-4 text-gray-700 space-y-2">
+              <li>Modified MATILDA robot chassis with tracks, remotely operated via ExpressLRS protocol using Radiomaster remote control.</li>
+              <li>Real-time video streaming using mounted cameras and Raspberry Pi via private WiFi.</li>
+              <li>Designed and 3D-printed carbon fiber robotic arm (2 DOF + claw).</li>
+            </ul>
+          </div>
+          
+          <!-- Project: GameScout (Steam Video Game Recommender System) -->
+          <div class="flex flex-col border rounded-xl p-6 shadow transition transform hover:scale-105 duration-300">
+            <h3 class="text-xl font-bold mb-2">GameScout</h3>
+            <p class="text-gray-700 mb-2 italic">Steam Video Game Recommender System</p>
+            <ul class="list-disc ml-4 text-gray-700 space-y-2">
+              <li>Built within 24 hours, implementing collaborative and content-based filtering with Scikit-learn.</li>
+              <li>Used Python, NumPy, Pandas, Matplotlib, and Jupyter Notebook for data analysis.</li>
+              <li>Deployed as interactive web app via Flask.</li>
+            </ul>
+          </div>
+
+          <!-- Project: Netflix Movie Recommender System -->
+          <a href="https://github.com/Monso0n/Netflix-Movie-Recommender-System" target="_blank" class="flex">
+            <div class="flex flex-col border rounded-xl p-6 shadow transition transform hover:scale-105 duration-300 w-full">
+              <h3 class="text-xl font-bold mb-2">Netflix Movie Recommender System</h3>
+              <p class="text-gray-700 mb-2 italic">A dynamic web app recommending Netflix titles based on user ratings and viewing history.</p>
+              <ul class="list-disc ml-4 text-gray-700 space-y-2">
+                <li>Integrates both collaborative and content-based filtering techniques for improved recommendations.</li>
+                <li>Preprocesses and analyzes large datasets with Pandas, ensuring fast performance.</li>
+                <li>Features an interactive UI built with Streamlit for seamless user experience.</li>
+              </ul>
+            </div>
+          </a>
+
+          <!-- Project: Vector Space Model Search Engine -->
+          <a href="https://github.com/Monso0n/Vector-Space-Model-Search-Engine" target="_blank" class="flex">
+            <div class="flex flex-col border rounded-xl p-6 shadow transition transform hover:scale-105 duration-300 w-full">
+              <h3 class="text-xl font-bold mb-2">Vector Space Model Search Engine</h3>
+              <p class="text-gray-700 mb-2 italic">Python-based search engine using an advanced Vector Space Model approach.</p>
+              <ul class="list-disc ml-4 text-gray-700 space-y-2">
+                <li>Implements robust tokenization, stop-word removal, and TF-IDF weighting for accurate query matching.</li>
+                <li>Processes queries and outputs the top-10 most relevant documents efficiently.</li>
+                <li>Includes custom pre-processor and inverted index modules for optimized performance.</li>
+              </ul>
+            </div>
+          </a>
+
+          <!-- Project: VALORANT Auto Music Player -->
+          <a href="https://github.com/Monso0n/VALORANT-Auto-Music-Player" target="_blank" class="flex">
+            <div class="flex flex-col border rounded-xl p-6 shadow transition transform hover:scale-105 duration-300 w-full">
+              <h3 class="text-xl font-bold mb-2">VALORANT Auto Music Player</h3>
+              <p class="text-gray-700 mb-2 italic">Automatically plays or pauses music based on the game state in VALORANT.</p>
+              <ul class="list-disc ml-4 text-gray-700 space-y-2">
+                <li>Monitors game state by interfacing with Windows API and parsing OpenCV video feed.</li>
+                <li>Automatically adjusts playback to sync with round transitions in the game.</li>
+                <li>Offers customization options for playlists and volume controls via a Tkinter GUI.</li>
+              </ul>
+            </div>
+          </a>
+
+          <!-- Project: CyberFlag -->
+          <a href="https://github.com/Monso0n/CyberFlag" target="_blank" class="flex">
+            <div class="flex flex-col border rounded-xl p-6 shadow transition transform hover:scale-105 duration-300 w-full">
+              <h3 class="text-xl font-bold mb-2">CyberFlag</h3>
+              <p class="text-gray-700 mb-2 italic">A comprehensive platform designed to educate youth on cybersecurity.</p>
+              <ul class="list-disc ml-4 text-gray-700 space-y-2">
+                <li>Developed as a team project for the 2020 Digital Convergence Hackathon.</li>
+                <li>Fosters safe online practices for youth during increased online activity during the COVID 19 pandemic.</li>
+              </ul>
+            </div>
+          </a>
+
+          <!-- Project: Poker Hand Solver -->
+          <a href="https://github.com/Monso0n/Poker-Hand-Solver" target="_blank" class="flex">
+            <div class="flex flex-col border rounded-xl p-6 shadow transition transform hover:scale-105 duration-300 w-full">
+              <h3 class="text-xl font-bold mb-2">Poker Hand Solver</h3>
+              <p class="text-gray-700 mb-2 italic">A high-performance Rust-based program that identifies the winning poker hands.</p>
+              <ul class="list-disc ml-4 text-gray-700 space-y-2">
+                <li>Efficiently evaluates and ranks poker hands using optimized algorithms.</li>
+              </ul>
+            </div>
+          </a>
+
+          <!-- Project: Computer Vision Object Recognition -->
+          <a href="https://github.com/Monso0n/Computer-Vision-Object-Recognition" target="_blank" class="flex">
+            <div class="flex flex-col border rounded-xl p-6 shadow transition transform hover:scale-105 duration-300 w-full">
+              <h3 class="text-xl font-bold mb-2">Computer Vision Object Recognition</h3>
+              <p class="text-gray-700 mb-2 italic">An OpenCV-based application for real-time object recognition and detection.</p>
+              <ul class="list-disc ml-4 text-gray-700 space-y-2">
+                <li>Utilizes deep learning models alongside traditional computer vision techniques.</li>
+                <li>Supports model fine-tuning and custom training for specialized applications.</li>
+                <li>Features a user-friendly interface for visualization and interaction.</li>
+              </ul>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+
+
+        
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 px-4 bg-white">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-3xl font-semibold text-center mb-8">Skills</h2>
+        
+        <!-- Icon Grid -->
+        <div class="grid grid-cols-3 md:grid-cols-6 gap-6 text-center">
+          <!-- Python -->
+          <div class="transition transform hover:scale-110 hover:-translate-y-1 flex flex-col items-center">
+            <i class="devicon-python-plain colored text-6xl"></i>
+            <p class="mt-2 text-gray-800">Python</p>
+          </div>
+          <!-- C -->
+          <div class="transition transform hover:scale-110 hover:-translate-y-1 flex flex-col items-center">
+            <i class="devicon-c-plain colored text-6xl"></i>
+            <p class="mt-2 text-gray-800">C</p>
+          </div>
+          <!-- C++ -->
+          <div class="transition transform hover:scale-110 hover:-translate-y-1 flex flex-col items-center">
+            <i class="devicon-cplusplus-plain colored text-6xl"></i>
+            <p class="mt-2 text-gray-800">C++</p>
+          </div>
+          <!-- Java -->
+          <div class="transition transform hover:scale-110 hover:-translate-y-1 flex flex-col items-center">
+            <i class="devicon-java-plain colored text-6xl"></i>
+            <p class="mt-2 text-gray-800">Java</p>
+          </div>
+          <!-- HTML5 -->
+          <div class="transition transform hover:scale-110 hover:-translate-y-1 flex flex-col items-center">
+            <i class="devicon-html5-plain colored text-6xl"></i>
+            <p class="mt-2 text-gray-800">HTML5</p>
+          </div>
+          <!-- CSS3 -->
+          <div class="transition transform hover:scale-110 hover:-translate-y-1 flex flex-col items-center">
+            <i class="devicon-css3-plain colored text-6xl"></i>
+            <p class="mt-2 text-gray-800">CSS3</p>
+          </div>
+          <!-- JavaScript -->
+          <div class="transition transform hover:scale-110 hover:-translate-y-1 flex flex-col items-center">
+            <i class="devicon-javascript-plain colored text-6xl"></i>
+            <p class="mt-2 text-gray-800">JavaScript</p>
+          </div>
+          <!-- PHP -->
+          <div class="transition transform hover:scale-110 hover:-translate-y-1 flex flex-col items-center">
+            <i class="devicon-php-plain colored text-6xl"></i>
+            <p class="mt-2 text-gray-800">PHP</p>
+          </div>
+          <!-- Flask -->
+          <div class="transition transform hover:scale-110 hover:-translate-y-1 flex flex-col items-center">
+            <i class="devicon-flask-original text-6xl"></i>
+            <p class="mt-2 text-gray-800">Flask</p>
+          </div>
+          <!-- MySQL -->
+          <div class="transition transform hover:scale-110 hover:-translate-y-1 flex flex-col items-center">
+            <i class="devicon-mysql-plain colored text-6xl"></i>
+            <p class="mt-2 text-gray-800">MySQL</p>
+          </div>
+          <!-- Docker -->
+          <div class="transition transform hover:scale-110 hover:-translate-y-1 flex flex-col items-center">
+            <i class="devicon-docker-plain colored text-6xl"></i>
+            <p class="mt-2 text-gray-800">Docker</p>
+          </div>
+          <!-- AWS -->
+          <div class="transition transform hover:scale-110 hover:-translate-y-1 flex flex-col items-center">
+            <i class="devicon-amazonwebservices-plain colored text-6xl"></i>
+            <p class="mt-2 text-gray-800">AWS</p>
+          </div>
+        </div>
+
+        <!-- Other Skills -->
+        <div class="mt-12 text-left bg-gray-50 p-6 rounded shadow">
+          <h3 class="text-2xl font-semibold mb-4 text-center">Other Skills</h3>
+          <ul class="list-disc pl-6 space-y-1 text-gray-700">
+            <li>Embedded Systems & Microcontroller Programming (Arduino, Raspberry Pi, ESP32)</li>
+            <li>Git version control</li>
+            <li>3D printing and model design</li>
+            <li>Database Systems Management</li>
+            <li>Data Science</li>
+            <li>VSCode, Vim, Jupyter Notebook</li>
+            <li>VirtualBox</li>
+            <li>PowerBI</li>
+            <li>Microsoft Word, Excel, PowerPoint</li>
+            <li>Adobe Premiere and Photoshop</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Education Section with Background and TMU Logo -->
+    <section id="education" class="py-16 px-4 relative">
+      <!-- Background Image with Blur -->
+      <div class="absolute inset-0 bg-cover bg-center filter blur-sm" style="background-image: url('assets/campus.jpg');"></div>
+      <div class="relative max-w-4xl mx-auto text-center bg-white bg-opacity-80 p-6 rounded">
+        <h2 class="text-3xl font-semibold mb-4">Education</h2>
+        <img
+          src="assets/TMU.png"
+          alt="TMU Logo"
+          class="w-24 mx-auto mb-4"
+        >
+        <p class="text-xl font-medium text-gray-800">
+          Toronto Metropolitan University (formerly Ryerson University)
+        </p>
+        <p class="text-gray-600 italic">
+          Sept 2019 – Apr 2025 · BSc Computer Science (Honours)
+        </p>
+        <ul class="mt-4 space-y-2 text-gray-700">
+          <li>Graduated with Distinction</li>
+          <li>Competitively admitted into Co-op Program</li>
+          <li>Undergraduate Thesis Project in Remotely Operated Mobile Robotics</li>
+          <li>Founder and President of TMU Muay Thai Club</li>
+          <li>Achieved Dean's List 2019-2020, 2020-2021, and 2024-2025<li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact Section (Plain Text) -->
+    <section id="contact" class="py-16 px-4 bg-white">
+      <div class="max-w-xl mx-auto text-center">
+        <h2 class="text-3xl font-semibold mb-4">Contact Me</h2>
+        <p class="text-gray-700 mb-8">
+          Please contact me directly at 
+          <a href="mailto:mayank.kainth@torontomu.ca" class="text-blue-600 underline">mayank.kainth@torontomu.ca</a>
+          <br> contact me through <strong>+1-(647)-206-3327</strong>.
+        </p>
+      </div>
+    </section>
+
+    <footer class="py-6 text-center text-sm text-gray-600 bg-gray-50">
+      &copy; 2025 Mayank Kainth. All rights reserved.
+    </footer>
+
+    <!-- Matrix Effect Script for Hero Section -->
+    <script>
+      // Matrix effect
+      const canvas = document.getElementById('matrix');
+      const heroSection = document.getElementById('hero');
+      const ctx = canvas.getContext('2d');
+
+      function resizeCanvas() {
+        canvas.width = heroSection.offsetWidth;
+        canvas.height = heroSection.offsetHeight;
+      }
+      resizeCanvas();
+
+      let fontSize = 16;
+      let columns = canvas.width / fontSize;
+      const drops = [];
+
+      for (let i = 0; i < columns; i++) {
+        drops[i] = 1;
+      }
+
+      function drawMatrix() {
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = '#0F0';
+        ctx.font = fontSize + 'px monospace';
+
+        for (let i = 0; i < drops.length; i++) {
+          const text = Math.random() > 0.5 ? '1' : '0';
+          ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+          // Reset drop
+          if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+            drops[i] = 0;
+          }
+          drops[i]++;
+        }
+      }
+
+      setInterval(drawMatrix, 33);
+
+      window.addEventListener('resize', () => {
+        resizeCanvas();
+        columns = canvas.width / fontSize;
+        // Reset drops for new column count
+        for (let i = 0; i < columns; i++) {
+          drops[i] = 1;
+        }
+      });
+
+      const navLinks = document.querySelectorAll("nav a");
+
+      window.addEventListener("scroll", () => {
+      const fromTop = window.scrollY + window.innerHeight / 2;
+      let activeFound = false;
+
+      navLinks.forEach(link => {
+        const section = document.querySelector(link.hash);
+        if (section) {
+          if (section.offsetTop <= fromTop && (section.offsetTop + section.offsetHeight) > fromTop) {
+            activeFound = true;
+            link.classList.add("active-link");
+          } else {
+            link.classList.remove("active-link");
+          }
+        }
+      });
+
+      // Fix: Always highlight "Contact" at bottom of the page
+      if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 10)) {
+        navLinks.forEach(link => link.classList.remove("active-link"));
+        document.querySelector('nav a[href="#contact"]').classList.add("active-link");
+      }
+    });
+
+    </script>
+  </body>
+</html>
